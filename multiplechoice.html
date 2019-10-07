@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta charset="utf-8">
+	<link rel="stylesheet" href="bootstrap/4-1-3/css/bootstrap.min.css">
+	<script src="ajax/libs/jquery/3-3-1/jquery.min.js"></script>
+	<script src="ajax/libs/popper-js/1-14-3/umd/popper.min.js"></script>
+	<script src="bootstrap/4-1-3/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="multiplechoice/quiz.js"></script>
+	<title>Quiz</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="index.html"><img src="audilogo.png" alt="logo" style="width:100px"></a>
+  <ul class="navbar-nav">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        PROBLEMS
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="problem1.html">Diesel | Gasoil</a>
+        <a class="dropdown-item" href="problem2.html">Carbon footprint</a>
+        <a class="dropdown-item" href="problem3.html">Taxes</a>
+        <a class="dropdown-item" href="problem4.html">Cons./Emis.</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="multiplechoice.html">Multiple Choice</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="imagemap.html">Image Map</a>
+    </li>
+    </ul>
+</nav>
+<br>
+<h1 class="pl-3">Ten Questions QUIZ</h1>
+<p class="pl-3">Answer to the following questions:</p>
+<div class="border m-4">
+  <p class="p-2">Question 1: Audi was founded in...</p>
+  <fieldset class="m-2">
+    <input type="radio" name="q1" id="q1a1" value="false"> Spain <br>
+    <input type="radio" name="q1" id="q1a2" value="false"> United Kingdom <br>
+    <input type="radio" name="q1" id="q1a3" value="true"> Germany <br>
+    <input type="radio" name="q1" id="q1a4" value="false"> France <br>
+    <p class="font-weight-bold" id="msg1"></p>
+  </fieldset>
+</div>
+<div class="border m-4">
+  <p class="p-2">Question 2: When it was founded?</p>
+  <fieldset class="m-2">
+    <input type="radio" name="q2" id="q2a1" value="false"> 1969 <br>
+    <input type="radio" name="q2" id="q2a2" value="true"> 1910 <br>
+    <input type="radio" name="q2" id="q2a3" value="false"> Today <br>
+    <input type="radio" name="q2" id="q2a4" value="false"> 1944 <br>
+    <p class="font-weight-bold" id="msg2"></p>
+  </fieldset>
+</div>
+<div class="border m-4">
+  <p class="p-2">Question 3: Which amount of taxes will a bus driver pay for its 40 seats bus in Vigo?</p>
+  <fieldset class="m-2">
+    <input type="radio" name="q3" value="false"> 212€ <br>
+    <input type="radio" name="q3" value="false"> 247€ <br>
+    <input type="radio" name="q3" value="true"> 227€ <br>
+    <input type="radio" name="q3" value="false"> 220€ <br>
+    <p class="font-weight-bold" id="msg3"></p>
+  </fieldset>
+</div>
+<div class="border m-4">
+  <p class="p-2">Question 4: 1000 pounds of production usually produce:</p>
+  <fieldset class="m-2">
+    <input type="radio" name="q4" value="true"> 750 kgCO2 <br>
+    <input type="radio" name="q4" value="false"> 750 gCO2 <br>
+    <input type="radio" name="q4" value="false"> 300 kgCO2 <br>
+    <input type="radio" name="q4" value="false"> 400 gC02 <br>
+    <p class="font-weight-bold" id="msg4"></p>
+  </fieldset>
+</div>
+<div class="border m-4">
+  <p class="p-2">Question 5: How many fiscal horses will a car have if its cylindre diameter is 8, its stroke 20cm and it has 4 pistons?</p>
+  <fieldset class="m-2">
+    <input type="radio" name="q5" value="false"> 97.01 <br>
+    <input type="radio" name="q5" value="true"> 20.24 <br>
+    <input type="radio" name="q5" value="false"> 55.61 <br>
+    <input type="radio" name="q5" value="false"> 5.12 <br>
+    <p class="font-weight-bold" id="msg5"></p>
+  </fieldset>
+</div>
+<div class="border m-4">
+  <p class="p-2">Question 6: How many "A" models it has?</p>
+  <fieldset class="m-2">
+    <input type="radio" name="q6" value="false"> 4 (A4 the last one)<br>
+    <input type="radio" name="q6" value="true"> 8 (A8 the last one)<br>
+    <input type="radio" name="q6" value="false"> 6 (A6 the last one) <br>
+    <input type="radio" name="q6" value="false"> 9 (A9 the last one) <br>
+    <p class="font-weight-bold" id="msg6"></p>
+  </fieldset>
+</div>
+<div class="border m-4">
+  <p class="p-2">Question 7: Which 5 models where produced in 1999?</p>
+  <fieldset class="m-2">
+    <input type="radio" name="q7" value="true"> A3, A4, A6, A8 & TT <br>
+    <input type="radio" name="q7" value="false"> A1, A2, A3, A4, A5 <br>
+    <input type="radio" name="q7" value="false"> A1, A3, Q3, Q5, TT <br>
+    <input type="radio" name="q7" value="false"> No answer is correct<br>
+    <p class="font-weight-bold" id="msg7"></p>
+  </fieldset>
+</div>
+<div class="border m-4">
+  <p class="p-2">Question 8: Where is AUDI's head office?</p>
+  <fieldset class="m-2">
+    <input type="radio" name="q8" value="false"> Zwickau <br>
+    <input type="radio" name="q8" value="false">  Aktiengesellschaft <br>
+    <input type="radio" name="q8" value="false"> Neckarsulm <br>
+    <input type="radio" name="q8" value="true"> Ingolstadt <br>
+    <p class="font-weight-bold" id="msg8"></p>
+  </fieldset>
+</div>
+<div class="border m-4">
+  <p class="p-2">Question 9: When was the four-circles logo first designed?</p>
+  <fieldset class="m-2">
+    <input type="radio" name="q9" value="true"> 1932 <br>
+    <input type="radio" name="q9" value="false"> 1949 <br>
+    <input type="radio" name="q9" value="false"> 1873 <br>
+    <input type="radio" name="q9" value="false"> 1985 <br>
+    <p class="font-weight-bold" id="msg9"></p>
+  </fieldset>
+</div>
+<div class="border m-4">
+  <p class="p-2">Question 10: In witch group is AUDI in? </p>
+  <fieldset class="m-2">
+    <input type="radio" name="q10" value="true"> Volkswagen group <br>
+    <input type="radio" name="q10" value="false"> German Cars <br>
+    <input type="radio" name="q10" value="false"> AUDI&CO <br>
+    <input type="radio" name="q10" value="false"> Illuminati <br>
+    <p class="font-weight-bold" id="msg10"></p>
+  </fieldset>
+</div>
+<div class="border m-4">
+<fieldset class="m-3">
+<input type="button" class="btn btn-outline-secondary" value="Check!" onclick="check()">
+</fieldset>
+<p class="pl-3" id="txt"></p>
+</div>
+</body>
+</html>
