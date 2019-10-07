@@ -1,0 +1,6 @@
+.row {
+	padding: 70px 0;
+	&.demo {
+        padding: 0 0 35px;
+	}
+}
