@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="bootstrap/4-1-3/css/bootstrap.min.css">
+  <script src="ajax/libs/jquery/3-3-1/jquery.min.js"></script>
+  <script src="ajax/libs/popper-js/1-14-3/umd/popper.min.js"></script>
+  <script src="bootstrap/4-1-3/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="ajax/libs/p5-js/0-6-1/p5.js"></script>
+    <script type="text/javascript" src="ajax/libs/p5-js/0-6-1/addons/p5.dom.js"></script>
+    <script type="text/javascript" src="ajax/libs/p5-js/0-6-1/addons/p5.sound.js"></script>
+    <script type="text/javascript" src="ajax/libs/Chart-js/2-7-3/Chart.bundle.js"></script>
+    <script type="text/javascript" src="ajax/libs/Chart-js/2-7-3/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="ajax/libs/Chart-js/2-7-3/problem4/chart.js"></script>
+   	<script type="text/javascript" src="ajax/libs/Chart-js/2-7-3/Chart.min.js"></script>
+   	<script type="text/javascript" src="problem4/javascript.js" ></script>
+   	<script type="text/javascript" src="problem4/chart.js" ></script>
+	<title>Emissions / Consumption</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="index.html"><img src="audilogo.png" alt="logo" style="width:100px"></a>
+  <ul class="navbar-nav">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        PROBLEMS
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="problem1.html">Diesel | Gasoil</a>
+        <a class="dropdown-item" href="problem2.html">Carbon footprint</a>
+        <a class="dropdown-item" href="problem3.html">Taxes</a>
+        <a class="dropdown-item" href="problem4.html">Cons./Emis.</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="multiplechoice.html">Multiple Choice</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="imagemap.html">Image Map</a>
+    </li>
+    </ul>
+</nav>
+<br>
+	<h1 class="pl-3">Relation between the consumption of a car and its emissions</h1>
+	<p class="pl-3">This calculator shows a chart of the amount of emissions and fuel consumed of a car in 10 years.</p>
+<fieldset class="border m-4">
+	<p class="m-2">Select an AUDI car example:</p>
+	<fieldset class="m-2">
+		<select id="sel" onchange="show(this)" class="custom-select">
+        	<option value="">-- Select --</option>
+    	</select>
+	</fieldset>
+	<p class="m-2">Or leave blank and put your own values:</p>
+	<fieldset  class="m-1">
+		Consumption (L/100km): <input type="number" id="consumption">
+	</fieldset>
+	<fieldset class="m-1">
+		Emissions (gC02/km): <input type="number" id="emissions">
+	</fieldset>
+	<fieldset class="m-1">
+		<input type="button" onclick="execute()" value="GO">
+	</fieldset>
+	</fieldset>
+	<p class="pl-3" id="msg"></p>
+	<canvas id="graph" width="200" height="100"></canvas>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta charset="utf-8">
+	<title>CARBON FOOTPRINT</title>
+  <link rel="stylesheet" href="bootstrap/4-1-3/css/bootstrap.min.css">
+  <script src="ajax/libs/jquery/3-3-1/jquery.min.js"></script>
+  <script src="ajax/libs/popper-js/1-14-3/umd/popper.min.js"></script>
+  <script src="bootstrap/4-1-3/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="problem2/footprint.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="index.html"><img src="audilogo.png" alt="logo" style="width:100px"></a>
+  <ul class="navbar-nav">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        PROBLEMS
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="problem1.html">Diesel | Gasoil</a>
+        <a class="dropdown-item" href="problem2.html">Carbon footprint</a>
+        <a class="dropdown-item" href="problem3.html">Taxes</a>
+        <a class="dropdown-item" href="problem4.html">Cons./Emis.</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="multiplechoice.html">Multiple Choice</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="imagemap.html">Image Map</a>
+    </li>
+    </ul>
+</nav>
+<br>
+	<h1 class="pl-3">CARBON FOOTPRINT OF A CAR</h1>
+	<p class="pl-3">This calculator uses actual constants and your information to calculate the level of emissions your car makes.
+	This calculus not only uses the emission of the engine, but the emissions produced while making the car. For each 1000 pounds spent making a car, it's estimated that 750kg of CO2 have been emitted. Also we use the mean of KM travelled in a year, 15000km. </p>
+	<p class="pl-3">Now fill the gaps with your information
+	<fieldset class="border m-4">
+  	<fieldset class="m-1">
+		Price of the car: <input type="text" id="price">
+		<select id="currency">
+			<option value="eur">€</option>
+			<option value="usd">$</option>
+			<option value="gbp">£</option>
+			<option value="jpy">¥</option>	
+		</select><br>
+		</fieldset>
+		<fieldset class="m-1">
+		Emissions of the car (gCO2/km): <input type="text" id="emissions"><br>
+		</fieldset>
+		<fieldset class="m-1">
+		Years: <input type="text" id="year">
+		<input type="button" value="Go" onclick="footprint()">	
+		</fieldset>
+		<p></p>
+		<fieldset class="m-1">
+		Total kgCO2: <input type="text" id="co2">
+    </fieldset>
+</fieldset>

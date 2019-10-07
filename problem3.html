@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta charset="utf-8">
+	<title>Tax horsepower</title>
+	<script src='ajax/libs/mathjax/2-7-5/latest.js' async></script>
+	<link rel="stylesheet" href="bootstrap/4-1-3/css/bootstrap.min.css">
+  <script src="ajax/libs/jquery/3-3-1/jquery.min.js"></script>
+  <script src="ajax/libs/popper-js/1-14-3/umd/popper.min.js"></script>
+  <script src="bootstrap/4-1-3/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="problem3/fiscal2.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="index.html"><img src="audilogo.png" alt="logo" style="width:100px"></a>
+  <ul class="navbar-nav">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        PROBLEMS
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="problem1.html">Diesel | Gasoil</a>
+        <a class="dropdown-item" href="problem2.html">Carbon footprint</a>
+        <a class="dropdown-item" href="problem3.html">Taxes</a>
+        <a class="dropdown-item" href="problem4.html">Cons./Emis.</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="multiplechoice.html">Multiple Choice</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="imagemap.html">Image Map</a>
+    </li>
+    </ul>
+</nav>
+<br>
+<h1 class="pl-3">Calculate the taxes for driving different cars (in Martorell, Spain)</h1>
+<p class="pl-3">Driving a car means having to pay a certain amount of taxes, that is different in each town. The parameters that settle these taxes also change depending on the type of vehicle. In tourism cars and in tractors, the value depends on the amount of <strong>tax horsepower</strong>.</p>
+<p class="pl-3">Formula used to calculate spanish tax horsepower</p>	
+\[Fiscal Power = 0.08*(0.785*D^2*R)^{0.6}*N\]
+<p class="pl-3">Where</p>
+<ul class="list">
+	<li class="pl-3 list-item">D = cylinder diameter in cm</li>
+	<li class="pl-3 list-item">R = piston stroke in cm</li>
+	<li class="pl-3 list-item">N = Number of cilinders</li>
+</ul>
+<fieldset class="border m-4">
+	Select your vehicle type:<br>
+	Tourism <input type="radio" name="cartype" id="tourismCheck" onclick="carCheck()"> |
+	Bus <input type="radio" name="cartype" id="busCheck" onclick="carCheck()"> |
+	Truck <input type="radio" name="cartype" id="truckCheck" onclick="carCheck()"> |
+	Tractor <input type="radio" name="cartype" id="tractorCheck" onclick="carCheck()"> | 
+	Motorbike <input type="radio" name="cartype" id="motorbikeCheck" onclick="carCheck()"> <br>
+	<p></p>
+	<div id="tourism" style="display:none">
+	<fieldset class="m-1">
+	Cylindrer diameter (cm): <input type="number" id="D" value="">
+	</fieldset>
+	<fieldset class="m-1">
+	Piston stroke (cm): <input type="number" id="R" value=""> 
+	</fieldset>
+	<fieldset class="m-1">
+	Number of cilinders: <input type="number" id="N"> 
+	</fieldset>
+	<fieldset class="m-1">
+	<input type="button" value="Calculate" onclick="tourism()">
+	</fieldset>
+	</div>
+	<div id="tractor" style="display:none">
+	<fieldset class="m-1">
+	Cylindrer diameter (cm): <input type="number" id="D2" value="">
+	</fieldset><fieldset class="m-1">
+	Piston stroke (cm): <input type="number" id="R2" value="">
+	</fieldset><fieldset class="m-1">
+	Number of cilinders: <input type="number" id="N2">
+	</fieldset><fieldset class="m-1">
+	<input type="button" value="Calculate" onclick="tractor()">
+	</fieldset>
+	</div>
+	<div id="bus" style="display:none">
+	<fieldset class="m-1">
+	Number of seats: <input type="number" id="seats">
+	</fieldset>
+	<fieldset class="m-1">
+	<input type="button" value="Calculate" onclick="bus()">
+	</fieldset>
+	</div>
+	<div id="truck" style="display:none">
+	<fieldset class="m-1">
+	Weight of the cargo (kg): <input type="number" id="cargo">
+	</fieldset>
+	<fieldset class="m-1">
+	<input type="button" value="Calculate" onclick="truck()">
+	</fieldset>
+	</div>
+	<div id="motorbike" style="display:none">
+	<fieldset class="m-1">
+	Cubic centimeters (cc): <input type="number" id="cc">
+	</fieldset>
+	<fieldset class="m-1">
+	<input type="button" value="Calculate" onclick="motorbike()">
+	</fieldset>
+	</div>
+	<p></p>
+	<fieldset class="m-1">
+	Taxes depending on your horsepowers (in Martorell): <input type="text" id="THP" value="">
+	</fieldset>
+</fieldset>
+<p class="pl-3">Other spanish cities: <a href="problem3/madrid.html">Madrid</a>, <a href="problem3/bcn.html">Barcelona</a>, <a href="index.html">Sevilla</a>, <a href="index.html">Vigo</a>.</p>
+</body>
+</html>
