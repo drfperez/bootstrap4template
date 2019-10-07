@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="bootstrap/4-1-3/css/bootstrap.min.css">
+  <script src="ajax/libs/jquery/3-3-1/jquery.min.js"></script>
+  <script src="ajax/libs/popper-js/1-14-3/umd/popper.min.js"></script>
+  <script src="bootstrap/4-1-3/js/bootstrap.min.js"></script>
+	<meta charset="utf-8">
+	<title>Diesel | Gasoline</title>
+	<script type="text/javascript" src="problem1/js.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="index.html"><img src="audilogo.png" alt="logo" style="width:100px"></a>
+  <ul class="navbar-nav">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        PROBLEMS
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="problem1.html">Diesel | Gasoline</a>
+        <a class="dropdown-item" href="problem2.html">Carbon footprint</a>
+        <a class="dropdown-item" href="problem3.html">Taxes</a>
+        <a class="dropdown-item" href="problem4.html">Cons./Emis.</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="multiplechoice.html">Multiple Choice</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="imagemap.html">Image Map</a>
+    </li>
+    </ul>
+</nav>
+<br>
+<h1 class="pl-3">CALCULATE THE YEARS IT WILL TAKE FOR A DIESEL CAR TO SAVE YOU MONEY</h1>
+<p class="pl-3">Diesel fuel is cheaper than gasoline, and that's the reason why diesel cars are more expensive, but more rentable. Use this calculator to check how many years it will take for the diesel car to start saving money in comparation with the gasoline car.</p>
+<p class="pl-3">The default values are from the diesel and gas models of an AUDI A3 car, in November 2018.</p>
+<fieldset class="border m-4">
+	<fieldset class="border border-right-0 border-left-0 m-2">
+	<fieldset class="m-1">
+	Price of the diesel car <input type="number" id="price1" value="27780"> |     
+	Diesel price now (€/L) <input type="number" id="fuel1" value="1.18"> |
+	Consumption of the diesel car (L/100km) <input type="number" id="consumption1" value="4.45"> 
+	</fieldset>
+	</fieldset>
+	<fieldset class="border border-right-0 border-left-0 m-2">
+	<fieldset class="m-1">
+	Price of the gasoline car <input type="number" id="price2" value="27210">    | 
+	Gasoline price now (€/L) <input type="number" id="fuel2" value="1.23">    | 
+	Consumption of the gasoline car (L/100km) <input type="number" id="consumption2" value="5.05"> 
+	</fieldset>
+	</fieldset>
+	<p></p>
+	 <fieldset  class="m-1">Years: <input type="text" id="years" value=""  class="m-1">
+	<input type="button" value="Go" onclick="totalPrice()"> </fieldset>
+</fieldset>
+</body>
+</html>
